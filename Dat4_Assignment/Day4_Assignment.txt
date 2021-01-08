@@ -1,0 +1,22 @@
+1.In the Binary Search algorithm, it is suggested to calculate the mid as beg + (end - beg) / 2
+instead of (beg + end) / 2. Why is it so?
+I am very sure that everyone is able to find middle index of array once you know start index and end index of array, but there are certain benefits of using start + (end – start)/2 over (start + end)/2, which are described below :
+The very first way of finding middle index is
+mid = (start + end)/2
+But there is problem with this approach, what if value of start or end or both is INT_MAX, it will cause integer overflow.
+The better way of calculating mid index is :
+mid = start + (end - start)/2
+
+
+
+
+
+
+2.Write a algorithm for Ternary Search?
+Ternary search is a divide and conquer algorithm that can be used to find an element in an array. It is similar to binary search where we divide the array into two parts but in this algorithm, we divide the given array into three parts and determine which has the key (searched element). We can divide the array into three parts by taking mid1 and mid2 which can be calculated as shown below. Initially, l and r will be equal to 0 and n-1 respectively, where n is the length of the array.
+Steps to perform Ternary Search: 
+1.First, we compare the key with the element at mid1. If found equal, we return mid1.
+2.If not, then we compare the key with the element at mid2. If found equal, we return mid2.
+3.If not, then we check whether the key is less than the element at mid1. If yes, then recur to the first part.
+4.If not, then we check whether the key is greater than the element at mid2. If yes, then recur to the third part.
+5.If not, then we recur to the second (middle) part.
